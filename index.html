@@ -4,36 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Code Quiz</title>
-    <style>
-        *, html {
-            margin: 0;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        section {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
 </head>
 <body>
+    <nav id="nav-bar">
+        <ul>
+            <a href="highscores.html">Highscore</a>
+            <li id="time">Seconds Remaining:</li>
+        </ul>
+    </nav>
     <main>
-        <section id="start">
-            <h1>Start</h1>
+        <section id="start-screen">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following questions to the best of your abilities with the time limit. The incorrect answers will reduce your score and time by 15 seconds!</p>
+            <button class="MC" id="start-btn">Start Quiz</button class="MC">
         </section>
-        <section id="quiz" style="display: none;">
-            <h2>Quiz</h2>
+        <section id="quiz-screen" class="hidden">
+            <div class="questions">
+                 <!-- Instead of long html, i can javascript the questions with only 1 <h2> -->
+                <h2>Random Q1</h2>
+                <div class="MClist">
+                    <button class="MC">Option1</button class="MC">
+                    <button class="MC">Option2</button class="MC">
+                    <button class="MC">Option3</button class="MC">
+                    <button class="MC">Option4</button class="MC">
+                </div>
+
+            </div>
+            <div id="questions">
+                <h2>Random Q2</h2>
+                <button class="MC">Option1</button class="MC">
+                <button class="MC">Option2</button class="MC">
+                <button class="MC">Option3</button class="MC">
+                <button class="MC">Option4</button class="MC">
+            </div>
+            <div id="questions">
+                <h2>Random Q3</h2>
+                <button class="MC">Option1</button class="MC">
+                <button class="MC">Option2</button class="MC">
+                <button class="MC">Option3</button class="MC">
+                <button class="MC">Option4</button class="MC">
+            </div>
+            <div id="questions">
+                <h2>Random Q4</h2>
+                <button class="MC">Option1</button class="MC">
+                <button class="MC">Option2</button class="MC">
+                <button class="MC">Option3</button class="MC">
+                <button class="MC">Option4</button class="MC">
+            </div>
+            <div id="questions">
+                <h2>Random Q5</h2>
+                <button class="MC">Option1</button class="MC">
+                <button class="MC">Option2</button class="MC">
+                <button class="MC">Option3</button class="MC">
+                <button class="MC" id="answer-btn">Option4</button class="MC">
+            </div>
         </section>
-        <section id="end" style="display: none;">
+        <section id="end-screen" class="hidden">
             <h2>End</h2>
+            <button class="MC" id="submit-btn"></button class="MC">
         </section>
-    </main>
-    <script src="assets/1script.js"></script>
+    </main> 
+    <script src="assets/js/script.js"></script>
     
 </body>
 </html>
