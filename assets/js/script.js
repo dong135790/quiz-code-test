@@ -13,14 +13,13 @@ var startBtn = document.querySelector("#start-btn");
 var quizEl = document.querySelector("#quiz-screen");
 // Stores the questions
 var questionEl = document.querySelector(".questions");
-var answerBtn = document.querySelector("#answer-btn");
 // End Section //
 var endEl = document.querySelector("#end-screen");
 var scoreSheetEl = document.getElementById("scoresheet");
 var submitBtn = document.querySelector("#submit-btn");
 // var userInfo = document.getElementById("initials").value;
 
-var multipleChoiceEl = document.querySelector("MClist");
+
 
 // Function to start quiz
 function startQuiz() {
@@ -37,27 +36,6 @@ function startQuiz() {
 
     // Start timer
 }
-// function buildQuiz() {
-//     document.body.innerHTML = '';
-//     questionIndex++;
-//     document.write(questionList[questionIndex].question + "<br />");
-
-//     for (var i=0; i < questionList[questionIndex].choices.length; i++) {
-//     document.write("<input type=radio id=myRadio name=radAnswer>" + questionList[questionIndex].choices[i] + "<br />");
-//     }
-        
-//     if (questionIndex <= (questionList.length - 1)) {
-//         var nextButton = document.createElement("input");
-//         nextButton.type = "button";
-//         nextButton.value = "Next question";
-//         nextButton.addEventListener('click', buildQuiz);
-//         document.body.appendChild(nextButton);
-//         console.log(questionIndex)
-//         console.log(questionList.length -1);
-//     } else if (questionIndex >= (questionList.length - 1)){
-//         endQuiz();
-//     }
-// };
 
 function buildQuiz() {
     // Set the displayed question equal to the list of objects based on the index number (currently 0)
