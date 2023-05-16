@@ -18,54 +18,22 @@
         <section id="start-screen">
             <h1>Coding Quiz Challenge</h1>
             <p>Try to answer the following questions to the best of your abilities with the time limit. The incorrect answers will reduce your score and time by 15 seconds!</p>
-            <button class="MC" id="start-btn">Start Quiz</button class="MC">
+            <button id="start-btn">Start Quiz</button>
         </section>
         <section id="quiz-screen" class="hidden">
             <div class="questions">
                  <!-- Instead of long html, i can javascript the questions with only 1 <h2> -->
-                <h2>Random Q1</h2>
-                <div class="MClist">
-                    <button class="MC">Option1</button class="MC">
-                    <button class="MC">Option2</button class="MC">
-                    <button class="MC">Option3</button class="MC">
-                    <button class="MC">Option4</button class="MC">
-                </div>
-
-            </div>
-            <div id="questions">
-                <h2>Random Q2</h2>
-                <button class="MC">Option1</button class="MC">
-                <button class="MC">Option2</button class="MC">
-                <button class="MC">Option3</button class="MC">
-                <button class="MC">Option4</button class="MC">
-            </div>
-            <div id="questions">
-                <h2>Random Q3</h2>
-                <button class="MC">Option1</button class="MC">
-                <button class="MC">Option2</button class="MC">
-                <button class="MC">Option3</button class="MC">
-                <button class="MC">Option4</button class="MC">
-            </div>
-            <div id="questions">
-                <h2>Random Q4</h2>
-                <button class="MC">Option1</button class="MC">
-                <button class="MC">Option2</button class="MC">
-                <button class="MC">Option3</button class="MC">
-                <button class="MC">Option4</button class="MC">
-            </div>
-            <div id="questions">
-                <h2>Random Q5</h2>
-                <button class="MC">Option1</button class="MC">
-                <button class="MC">Option2</button class="MC">
-                <button class="MC">Option3</button class="MC">
-                <button class="MC" id="answer-btn">Option4</button class="MC">
+                <h2 id="question-title"></h2>
+                <div id="question-choice"></div>
+                <button id="submit-btn">Submit Quiz</button>
             </div>
         </section>
         <section id="end-screen" class="hidden">
             <h2>End</h2>
-            <button class="MC" id="submit-btn"></button class="MC">
+            <button id="submit-btn">Return</button>
         </section>
     </main> 
+    <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
     
 </body>
