@@ -32,9 +32,6 @@ function startQuiz() {
 
     // Displays the current question
     buildQuiz();
-    
-
-    // Start timer
 }
 
 function buildQuiz() {
@@ -54,12 +51,13 @@ function buildQuiz() {
 
         choiceButton.textContent = displayChoice;
         questionChoiceEl.appendChild(choiceButton);
+        console.log(i);
+        console.log(displayQuestion.choices.length)
         console.log(displayChoice);
     if (questionIndex < questionList.length - 1) {
         choiceButton.addEventListener('click', function () {
-
             if (!choiceButton.value === questionList[i].correctAnswer) {
-                time - 5;
+                score--;
             } else if (choiceButton.value === questionList[i].correctAnswer) {
                 score++;
             }
@@ -73,11 +71,19 @@ function buildQuiz() {
         choiceButton.addEventListener('click', function() {
             endQuiz();
         })
+    
     }
     }
-    // if (questionIndex === questionList.length)
 }
     
+function startTimer() {
+    timeInteral = setInterval(function() {
+        time--
+        if (time === 0) {
+            endQuiz();
+        }
+    }, 1000)
+}
 
 // Function for quiz correct/wrong questions.
 function questionStatus () {
@@ -103,6 +109,7 @@ function returnScreen () {
 
     startEl.removeAttribute('class');
     navEl.removeAttribute('class');
+
 }
 // button to begin to quiz. Once clicked, the startQuiz() will run
 startBtn.onclick = startQuiz;
